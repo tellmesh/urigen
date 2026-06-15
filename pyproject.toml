@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "urigen"
-version = "0.1.0"
+version = "0.1.1"
 description = "URI Ecosystem Generator - proposals, ecosystem artifacts, verification, and explain maps."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -15,6 +15,7 @@ dependencies = [
     "uri2flow",
     "uri3",
 ]
+license = "Apache-2.0"
 
 [project.scripts]
 urigen = "urigen.cli:main"
@@ -59,3 +60,10 @@ max_commits = 500
 
 # Cost thresholds for badge colors (USD)
 badge_color_thresholds = { low = 1.0, medium = 5.0, high = 10.0, critical = 50.0 }
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0",
+    "goal>=2.1.0",
+    "costs>=0.1.20",
+    "pfix>=0.1.60",
+]
