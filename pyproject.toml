@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urigen"
+version = "0.1.0"
+description = "URI Ecosystem Generator - proposals, ecosystem artifacts, verification, and explain maps."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "jinja2>=3.1",
+    "pyyaml>=6.0",
+    "touri",
+    "uri2flow",
+    "uri3",
+]
+
+[project.scripts]
+urigen = "urigen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["urigen*"]
+
+[tool.setuptools.package-data]
+urigen = ["templates/*.j2", "schemas/*.json"]
+
+[tool.uv.sources]
+touri = { git = "https://github.com/tellmesh/touri.git" }
+uri2flow = { git = "https://github.com/tellmesh/uri2flow.git" }
+uri3 = { git = "https://github.com/tellmesh/uri3.git" }
