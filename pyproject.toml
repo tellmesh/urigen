@@ -27,9 +27,9 @@ include = ["urigen*"]
 urigen = ["templates/*.j2", "schemas/*.json"]
 
 [tool.uv.sources]
-touri = { git = "https://github.com/tellmesh/touri.git" }
-uri2flow = { git = "https://github.com/tellmesh/uri2flow.git" }
-uri3 = { git = "https://github.com/tellmesh/uri3.git" }
+touri = { path = "../touri", editable = true }
+uri2flow = { path = "../uri2flow", editable = true }
+uri3 = { path = "../uri3", editable = true }
 
 [tool.pfix]
 # Self-healing Python configuration
