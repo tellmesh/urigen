@@ -145,6 +145,17 @@ markpact README export with capability/flow/deploy/test blocks
 recovery reports and uri2verify replay integration
 ```
 
+## Install
+
+```bash
+pip install -e .
+```
+
+## Links
+
+- [TODO](TODO.md)
+- Org status: [`../TODO_STATUS.md`](../TODO_STATUS.md)
+
 
 ## License
 
